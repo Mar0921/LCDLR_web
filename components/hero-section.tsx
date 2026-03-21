@@ -1,3 +1,27 @@
+// Pre-computed particle positions to avoid hydration mismatch
+const particles = [
+  { left: 12, top: 8, delay: 0.2, duration: 3.5 },
+  { left: 85, top: 15, delay: 1.1, duration: 4.2 },
+  { left: 45, top: 22, delay: 2.3, duration: 3.8 },
+  { left: 72, top: 35, delay: 0.7, duration: 4.5 },
+  { left: 28, top: 42, delay: 1.8, duration: 3.2 },
+  { left: 92, top: 55, delay: 2.9, duration: 4.0 },
+  { left: 18, top: 68, delay: 0.4, duration: 3.6 },
+  { left: 65, top: 75, delay: 1.5, duration: 4.3 },
+  { left: 38, top: 82, delay: 2.1, duration: 3.9 },
+  { left: 78, top: 88, delay: 0.9, duration: 4.1 },
+  { left: 55, top: 12, delay: 2.6, duration: 3.4 },
+  { left: 8, top: 45, delay: 1.3, duration: 4.4 },
+  { left: 95, top: 32, delay: 0.1, duration: 3.7 },
+  { left: 32, top: 58, delay: 2.0, duration: 4.6 },
+  { left: 68, top: 92, delay: 1.7, duration: 3.3 },
+  { left: 22, top: 28, delay: 2.8, duration: 4.8 },
+  { left: 82, top: 62, delay: 0.6, duration: 3.1 },
+  { left: 48, top: 78, delay: 1.4, duration: 4.7 },
+  { left: 15, top: 95, delay: 2.5, duration: 3.0 },
+  { left: 58, top: 48, delay: 0.3, duration: 4.9 },
+]
+
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
@@ -6,15 +30,15 @@ export function HeroSection() {
       
       {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
+        {particles.map((particle, i) => (
           <div
             key={i}
             className="absolute w-1 h-1 bg-primary/30 rounded-full animate-pulse"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
+              left: `${particle.left}%`,
+              top: `${particle.top}%`,
+              animationDelay: `${particle.delay}s`,
+              animationDuration: `${particle.duration}s`,
             }}
           />
         ))}
