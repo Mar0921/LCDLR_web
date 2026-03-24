@@ -1,3 +1,7 @@
+"use client"
+
+import { useTranslation } from "@/lib/translations"
+
 // Pre-computed particle positions to avoid hydration mismatch
 const particles = [
   { left: 12, top: 8, delay: 0.2, duration: 3.5 },
@@ -23,6 +27,8 @@ const particles = [
 ]
 
 export function HeroSection() {
+  const { t } = useTranslation()
+  
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background effect */}
@@ -48,31 +54,30 @@ export function HeroSection() {
         {/* Game logo placeholder */}
         <div className="mb-8 flex justify-center">
           <div className="w-48 h-48 border-2 border-dashed border-primary/40 rounded-lg flex items-center justify-center bg-secondary/20">
-            <span className="text-muted-foreground text-sm">[Logo del Juego]</span>
+            <span className="text-muted-foreground text-sm">[{t.gameLogo}]</span>
           </div>
         </div>
 
         <h1 className="font-serif text-5xl md:text-7xl font-semibold tracking-tight text-foreground mb-6 text-balance">
-          La Casa de los Recuerdos
+          {t.gameTitle}
         </h1>
         
         <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-8 max-w-2xl mx-auto text-pretty">
-          Un viaje a través de la memoria, donde cada habitación guarda un secreto 
-          y cada recuerdo puede ser tanto una bendición como una maldición.
+          {t.heroDescription}
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button className="px-8 py-3 bg-primary text-primary-foreground font-medium tracking-wide transition-all duration-300 hover:bg-primary/90 hover:scale-105">
-            Descubrir más
+            {t.discoverMore}
           </button>
           <button className="px-8 py-3 border border-border text-foreground font-medium tracking-wide transition-all duration-300 hover:bg-secondary hover:border-primary/50">
-            Ver tráiler
+            {t.watchTrailer}
           </button>
         </div>
 
         {/* Scroll indicator */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground">
-          <span className="text-xs tracking-widest uppercase">Scroll</span>
+          <span className="text-xs tracking-widest uppercase">{t.scroll}</span>
           <div className="w-px h-8 bg-gradient-to-b from-primary/60 to-transparent animate-pulse" />
         </div>
       </div>

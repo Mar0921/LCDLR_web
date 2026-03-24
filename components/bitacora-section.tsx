@@ -1,4 +1,11 @@
+"use client"
+
+import { useTranslation } from "@/lib/translations"
+import { ScrollAnimation } from "@/components/scroll-animation"
+
 export function BitacoraSection() {
+  const { t } = useTranslation()
+  
   const weeks = [
     {
       week: 8,
@@ -104,19 +111,21 @@ export function BitacoraSection() {
   return (
     <section className="py-24 px-6 pt-32">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="font-serif text-4xl md:text-5xl text-foreground tracking-wide mb-4">
-            Bitácora de Desarrollo
-          </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Registro semanal del progreso en el desarrollo de La Casa de los Recuerdos.
-          </p>
-          <div className="mt-6 flex justify-center gap-4 text-sm text-muted-foreground">
-            <span>Semana 8 - 16</span>
-            <span className="text-border">|</span>
-            <span>9 semanas de desarrollo</span>
+        <ScrollAnimation>
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl md:text-5xl text-foreground tracking-wide mb-4">
+              {t.devLog}
+            </h2>
+            <p className="text-muted-foreground max-w-xl mx-auto">
+              {t.devLogDesc}
+            </p>
+            <div className="mt-6 flex justify-center gap-4 text-sm text-muted-foreground">
+              <span>{t.weekRange}</span>
+              <span className="text-border">|</span>
+              <span>{t.weeksOfDev}</span>
+            </div>
           </div>
-        </div>
+        </ScrollAnimation>
 
         {/* Timeline */}
         <div className="relative">
@@ -125,89 +134,93 @@ export function BitacoraSection() {
 
           <div className="space-y-12">
             {weeks.map((week, index) => (
-              <div key={index} className="relative pl-20">
-                {/* Week indicator */}
-                <div className="absolute left-0 top-0 flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full bg-card border-2 border-primary/40 flex flex-col items-center justify-center">
-                    <span className="text-xs text-muted-foreground uppercase">Sem</span>
-                    <span className="text-lg font-serif text-primary">{week.week}</span>
+              <ScrollAnimation key={index} delay={index * 50}>
+                <div className="relative pl-20">
+                  {/* Week indicator */}
+                  <div className="absolute left-0 top-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-card border-2 border-primary/40 flex flex-col items-center justify-center">
+                      <span className="text-xs text-muted-foreground uppercase">{t.week}</span>
+                      <span className="text-lg font-serif text-primary">{week.week}</span>
+                    </div>
+                  </div>
+
+                  {/* Content card */}
+                  <div className="p-6 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors duration-300">
+                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                      <h3 className="font-serif text-xl text-foreground">{week.title}</h3>
+                      <span className="text-xs text-muted-foreground mt-1 md:mt-0">{week.date}</span>
+                    </div>
+
+                    <ul className="space-y-3">
+                      {week.items.map((item, itemIndex) => (
+                        <li key={itemIndex} className="flex items-start gap-3">
+                          <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary/60" />
+                          <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {/* Image placeholder for weekly demo */}
+                    <div className="mt-6 pt-4 border-t border-border">
+                      <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider">{t.visualDemo}</p>
+                      <div className="aspect-video bg-secondary/40 border border-dashed border-border rounded-lg flex flex-col items-center justify-center gap-2">
+                        <svg 
+                          className="w-10 h-10 text-muted-foreground/50" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeWidth="1.5" />
+                          <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5" />
+                          <path d="M21 15l-5-5L5 21" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                        <span className="text-xs text-muted-foreground/60">[Imagen de avance - Semana {week.week}]</span>
+                      </div>
+                    </div>
+
+                    {/* Progress indicator */}
+                    <div className="mt-4 pt-4 border-t border-border">
+                      <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
+                        <span>{t.weekProgress}</span>
+                        <span className="text-primary">[Porcentaje placeholder]</span>
+                      </div>
+                      <div className="h-1 bg-secondary rounded-full overflow-hidden">
+                        <div 
+                          className="h-full bg-primary/60 rounded-full"
+                          style={{ width: `${Math.min(100, (index + 1) * 11)}%` }}
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
-
-                {/* Content card */}
-                <div className="p-6 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors duration-300">
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                    <h3 className="font-serif text-xl text-foreground">{week.title}</h3>
-                    <span className="text-xs text-muted-foreground mt-1 md:mt-0">{week.date}</span>
-                  </div>
-
-                  <ul className="space-y-3">
-                    {week.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start gap-3">
-                        <span className="flex-shrink-0 w-1.5 h-1.5 mt-2 rounded-full bg-primary/60" />
-                        <span className="text-sm text-muted-foreground leading-relaxed">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  {/* Image placeholder for weekly demo */}
-                  <div className="mt-6 pt-4 border-t border-border">
-                    <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider">Demostración visual</p>
-                    <div className="aspect-video bg-secondary/40 border border-dashed border-border rounded-lg flex flex-col items-center justify-center gap-2">
-                      <svg 
-                        className="w-10 h-10 text-muted-foreground/50" 
-                        fill="none" 
-                        stroke="currentColor" 
-                        viewBox="0 0 24 24"
-                      >
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeWidth="1.5" />
-                        <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5" />
-                        <path d="M21 15l-5-5L5 21" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                      <span className="text-xs text-muted-foreground/60">[Imagen de avance - Semana {week.week}]</span>
-                    </div>
-                  </div>
-
-                  {/* Progress indicator */}
-                  <div className="mt-4 pt-4 border-t border-border">
-                    <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
-                      <span>Progreso de la semana</span>
-                      <span className="text-primary">[Porcentaje placeholder]</span>
-                    </div>
-                    <div className="h-1 bg-secondary rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-primary/60 rounded-full"
-                        style={{ width: `${Math.min(100, (index + 1) * 11)}%` }}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </ScrollAnimation>
             ))}
           </div>
         </div>
 
         {/* Summary */}
-        <div className="mt-16 p-8 bg-secondary/20 border border-border rounded-lg text-center">
-          <h3 className="font-serif text-2xl text-foreground mb-4">Estado del Proyecto</h3>
-          <div className="grid grid-cols-3 gap-6 mb-6">
-            <div>
-              <span className="block text-3xl font-serif text-primary">9</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">Semanas</span>
+        <ScrollAnimation delay={500}>
+          <div className="mt-16 p-8 bg-secondary/20 border border-border rounded-lg text-center">
+            <h3 className="font-serif text-2xl text-foreground mb-4">{t.projectStatus}</h3>
+            <div className="grid grid-cols-3 gap-6 mb-6">
+              <div>
+                <span className="block text-3xl font-serif text-primary">9</span>
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">Semanas</span>
+              </div>
+              <div>
+                <span className="block text-3xl font-serif text-primary">[%]</span>
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">{t.completed}</span>
+              </div>
+              <div>
+                <span className="block text-3xl font-serif text-primary">[#]</span>
+                <span className="text-xs text-muted-foreground uppercase tracking-wider">{t.tasks}</span>
+              </div>
             </div>
-            <div>
-              <span className="block text-3xl font-serif text-primary">[%]</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">Completado</span>
-            </div>
-            <div>
-              <span className="block text-3xl font-serif text-primary">[#]</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">Tareas</span>
-            </div>
+            <p className="text-sm text-muted-foreground">
+              {t.developmentContinues} [Fecha placeholder]
+            </p>
           </div>
-          <p className="text-sm text-muted-foreground">
-            El desarrollo continúa según lo planificado. Próxima actualización: [Fecha placeholder]
-          </p>
-        </div>
+        </ScrollAnimation>
       </div>
     </section>
   )
