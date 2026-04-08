@@ -1,8 +1,5 @@
-"use client"
-
 import { useTranslation } from "@/lib/translations"
 
-// Pre-computed particle positions to avoid hydration mismatch
 const particles = [
   { left: 12, top: 8, delay: 0.2, duration: 3.5 },
   { left: 85, top: 15, delay: 1.1, duration: 4.2 },
@@ -28,7 +25,6 @@ const particles = [
 
 export function HeroSection() {
   const { t } = useTranslation()
-  
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       {/* Background effect */}

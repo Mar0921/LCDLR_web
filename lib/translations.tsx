@@ -37,6 +37,9 @@ interface Translations {
   protection: string
   transformation: string
   lightAndShadow: string
+  characterOfLight: string
+  characterOfShadow: string
+  illustrationOf: string
   
   // Story
   theStory: string
@@ -81,6 +84,36 @@ interface Translations {
   developmentContinues: string
   nextUpdate: string
   visualDemo: string
+  datePlaceholder: string
+  progressPlaceholder: string
+  weekProgressLabel: string
+  weeksLabel: string
+  tasksLabel: string
+  projectContinues: string
+  nextUpdateLabel: string
+  weekImagePlaceholder: string
+  finalWeek: string
+  weekSanta: string
+  week7Title: string
+  week7Items: string[]
+  week8Title: string
+  week8Items: string[]
+  week9Title: string
+  week9Items: string[]
+  weekSantaTitle: string
+  weekSantaItems: string[]
+  week10Title: string
+  week10Items: string[]
+  week11Title: string
+  week11Items: string[]
+  week12Title: string
+  week12Items: string[]
+  week13Title: string
+  week13Items: string[]
+  week14Title: string
+  week14Items: string[]
+  week15Title: string
+  week15Items: string[]
   
   // Equipo
   ourTeam: string
@@ -167,8 +200,8 @@ const translations: Record<Language, Translations> = {
     // Bitacora
     devLog: "Bitácora de Desarrollo",
     devLogDesc: "Registro semanal del progreso en el desarrollo de La Casa de los Recuerdos.",
-    weekRange: "Semana 8 - 16",
-    weeksOfDev: "9 semanas de desarrollo",
+    weekRange: "Semana 7 - 15",
+    weeksOfDev: "10 semanas de desarrollo (incluye Semana Santa)",
     week: "Sem",
     weekProgress: "Progreso de la semana",
     progress: "Completado",
@@ -178,6 +211,78 @@ const translations: Record<Language, Translations> = {
     developmentContinues: "El desarrollo continúa según lo planificado. Próxima actualización:",
     nextUpdate: "Próxima actualización",
     visualDemo: "Demostración visual",
+    week7Title: "Configuración del Proyecto y Primer Nivel",
+    week7Items: [
+      "Se creó el proyecto, configuró el repositorio y se organizón la escena del menú y el primer nivel, implementando los assets básicos de la cocina.",
+    ],
+    week8Title: "Mecánicas de Personajes y Nivel 1",
+    week8Items: [
+      "Se implementaron las mecánicas de caminar, saltar y habilidades de los personajes Lumen y Vyre, utilizando modelos temporales para probar estas funciones.",
+      "Se añadió una llave en la nevera para avanzar al siguiente nivel, junto con un cartel informativo sobre las habilidades de los personajes y una zona sombra que afecta al jugador.",
+      "Se configuró el flujo del nivel y se añadió un efecto visual al finalizar, mostrando cómo la sombra sigue al jugador, generando una atmósfera de suspense.",
+    ],
+    week9Title: "Transición de Niveles y Audio",
+    week9Items: [
+      "Se creó la subzona de transición entre la cocina (nivel 1) y la sala (nivel 2).",
+      "Descarga de soundtracks para el menú y la cocina.",
+    ],
+    weekSantaTitle: "Modelos Finales y Script de La Sombra",
+    weekSantaItems: [
+      "Últimos retoques a los modelos finales de Lumen y Vyre en Blender para su implementación en el juego.",
+      "Se desarrolló un nuevo script para La Sombra, para que persiga al jugador en areas específicas",
+    ],
+    week10Title: "Assets para Niveles 3 y 4",
+    week10Items: [
+      "Descarga de los assets para los niveles 3 (Cuarto propio) y 4 (Cuarto de la hermana).",
+    ],
+    week11Title: "Desarrollo Visual",
+    week11Items: [
+      "Creación de assets visuales para la primera habitación",
+      "Implementación del sistema de iluminación atmosférica",
+      "Desarrollo de efectos visuales para las habilidades de los personajes",
+      "Integración de los primeros elementos de UI definitivos",
+    ],
+    week12Title: "Sistema de Puzzles",
+    week12Items: [
+      "Diseño de los primeros tres puzzles del juego",
+      "Implementación del sistema de interacción con objetos",
+      "Creación del inventario de memorias coleccionables",
+      "Testing de dificultad y ajuste de mecánicas",
+    ],
+    week13Title: "Narrativa y Audio",
+    week13Items: [
+      "Escritura de los diálogos principales del juego",
+      "Selección y creación de la banda sonora ambiental",
+      "Implementación del sistema de texto y narración",
+      "Grabación de efectos de sonido para interacciones",
+    ],
+    week14Title: "Integración y Testing",
+    week14Items: [
+      "Integración de todos los sistemas desarrollados",
+      "Sesiones de playtesting con usuarios externos",
+      "Corrección de bugs y problemas de rendimiento",
+      "Ajustes de balance y dificultad basados en feedback",
+    ],
+    week15Title: "Pulido Final",
+    week15Items: [
+      "Optimización general del rendimiento del juego",
+      "Revisión final de todos los assets visuales",
+      "Preparación de la documentación del proyecto",
+      "Compilación de la versión final para presentación",
+    ],
+    datePlaceholder: "Fecha placeholder",
+    progressPlaceholder: "Porcentaje placeholder",
+    weekProgressLabel: "Progreso de la semana",
+    weeksLabel: "Semanas",
+    tasksLabel: "Tareas",
+    projectContinues: "El desarrollo continúa según lo planificado. Próxima actualización:",
+    nextUpdateLabel: "Próxima actualización",
+    weekImagePlaceholder: "Imagen de avance - Semana",
+    finalWeek: "Final",
+    weekSanta: "Santa",
+    characterOfLight: "Personaje de luz",
+    characterOfShadow: "Personaje de sombra",
+    illustrationOf: "Ilustración de",
     
     // Equipo
     ourTeam: "Nuestro Equipo",
@@ -256,8 +361,8 @@ const translations: Record<Language, Translations> = {
     // Bitacora
     devLog: "Development Log",
     devLogDesc: "Weekly record of progress in the development of The House of Memories.",
-    weekRange: "Week 8 - 16",
-    weeksOfDev: "9 weeks of development",
+    weekRange: "Week 7 - 15",
+    weeksOfDev: "10 weeks of development (includes Holy Week)",
     week: "Week",
     weekProgress: "Weekly progress",
     progress: "Progress",
@@ -267,6 +372,78 @@ const translations: Record<Language, Translations> = {
     developmentContinues: "Development continues as planned. Next update:",
     nextUpdate: "Next update",
     visualDemo: "Visual demo",
+    week7Title: "Project Setup and First Level",
+    week7Items: [
+      "Project was created, repository was configured, and the menu scene and first level were organized, implementing basic kitchen assets.",
+    ],
+    week8Title: "Character Mechanics and Level 1",
+    week8Items: [
+      "Implemented walking, jumping, and character abilities for Lumen and Vyre, using temporary models to test these functions.",
+      "Added a key in the fridge to advance to the next level, along with an informational sign about character abilities and a shadow zone that affects the player.",
+      "Configured level flow and added a visual effect at the end, showing how the shadow follows the player, creating an atmosphere of suspense.",
+    ],
+    week9Title: "Level Transitions and Audio",
+    week9Items: [
+      "Created the transition subzone between the kitchen (level 1) and the living room (level 2).",
+      "Downloaded soundtracks for the menu and kitchen.",
+    ],
+    weekSantaTitle: "Final Models and Shadow Script",
+    weekSantaItems: [
+      "Final touches to the final models of Lumen and Vyre in Blender for implementation in the game.",
+      "Developed a new script for The Shadow to chase the player in specific areas.",
+    ],
+    week10Title: "Assets for Levels 3 and 4",
+    week10Items: [
+      "Downloaded assets for levels 3 (Own Room) and 4 (Sister's Room).",
+    ],
+    week11Title: "Visual Development",
+    week11Items: [
+      "Creation of visual assets for the first room",
+      "Implementation of atmospheric lighting system",
+      "Development of visual effects for character abilities",
+      "Integration of the first definitive UI elements",
+    ],
+    week12Title: "Puzzle System",
+    week12Items: [
+      "Design of the first three puzzles in the game",
+      "Implementation of the object interaction system",
+      "Creation of the collectible memories inventory",
+      "Testing of difficulty and mechanic adjustments",
+    ],
+    week13Title: "Narrative and Audio",
+    week13Items: [
+      "Writing of the main dialogues of the game",
+      "Selection and creation of the ambient soundtrack",
+      "Implementation of the text and narration system",
+      "Recording of sound effects for interactions",
+    ],
+    week14Title: "Integration and Testing",
+    week14Items: [
+      "Integration of all developed systems",
+      "Playtesting sessions with external users",
+      "Bug correction and performance issues",
+      "Balance and difficulty adjustments based on feedback",
+    ],
+    week15Title: "Final Polish",
+    week15Items: [
+      "General optimization of game performance",
+      "Final review of all visual assets",
+      "Preparation of project documentation",
+      "Compilation of the final version for presentation",
+    ],
+    datePlaceholder: "Date placeholder",
+    progressPlaceholder: "Percentage placeholder",
+    weekProgressLabel: "Progress of the week",
+    weeksLabel: "Weeks",
+    tasksLabel: "Tasks",
+    projectContinues: "Development continues as planned. Next update:",
+    nextUpdateLabel: "Next update",
+    weekImagePlaceholder: "Progress image - Week",
+    finalWeek: "Final",
+    weekSanta: "Santa",
+    characterOfLight: "Character of light",
+    characterOfShadow: "Character of shadow",
+    illustrationOf: "Illustration of",
     
     // Team
     ourTeam: "Our Team",
