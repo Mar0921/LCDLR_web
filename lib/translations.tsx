@@ -235,12 +235,10 @@ const translations: Record<Language, Translations> = {
     week10Items: [
       "Descarga de los assets para los niveles 3 (Cuarto propio) y 4 (Cuarto de la hermana).",
     ],
-    week11Title: "Desarrollo Visual",
+    week11Title: "Desarrollo del Teaser Trailer",
     week11Items: [
-      "Creación de assets visuales para la primera habitación",
-      "Implementación del sistema de iluminación atmosférica",
-      "Desarrollo de efectos visuales para las habilidades de los personajes",
-      "Integración de los primeros elementos de UI definitivos",
+      "Se desarrolló el primer teaser trailer del juego",
+      
     ],
     week12Title: "Sistema de Puzzles",
     week12Items: [
