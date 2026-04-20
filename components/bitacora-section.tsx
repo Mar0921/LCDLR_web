@@ -68,7 +68,7 @@ export function BitacoraSection() {
       date: t.datePlaceholder,
       items: t.week11Items,
       videos: [
-        { src: "https://youtu.be/Lk8cOeoH0R4?si=CkhH-Un60JDxkMWt", alt: isEnglish ? "Casa de los Recuerdos Teaser Trailer" : "Teaser de Casa de los Recuerdos",}
+        { src: "/videos/Teaser%20La%20casa%20de%20los%20recuerdos.mp4", alt: isEnglish ? "Casa de los Recuerdos Teaser Trailer" : "Teaser de Casa de los Recuerdos",}
       ]
     },
     {

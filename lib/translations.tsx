@@ -238,7 +238,9 @@ const translations: Record<Language, Translations> = {
     week11Title: "Desarrollo del Teaser Trailer",
     week11Items: [
       "Se desarrolló el primer teaser trailer del juego",
-      
+      "Se aplicó un modelo a La Sombra",
+      "Se mejoraron los escenarios establecidos anteriormente",
+      "Se integraron los modelos definitivos para Lumen y Vyre junto con sus mecánicas"
     ],
     week12Title: "Sistema de Puzzles",
     week12Items: [
