@@ -68,7 +68,7 @@ export function BitacoraSection() {
       date: t.datePlaceholder,
       items: t.week11Items,
       videos: [
-        { src: "/videos/Teaser%20La%20casa%20de%20los%20recuerdos.mp4", alt: isEnglish ? "Casa de los Recuerdos Teaser Trailer" : "Teaser de Casa de los Recuerdos",}
+        { src: "https://www.youtube.com/embed/Lk8cOeoH0R4", alt: isEnglish ? "Watch on YouTube" : "Ver en YouTube", isYoutube: true },
       ]
     },
     {
@@ -115,15 +115,13 @@ export function BitacoraSection() {
           </div>
         </div>
 
-        {/* Timeline */}
         <div className="relative">
-          {/* Vertical line */}
           <div className="absolute left-8 top-0 bottom-0 w-px bg-gradient-to-b from-primary/60 via-border to-transparent" />
 
           <div className="space-y-12">
             {weeks.map((week, index) => (
               <div key={index} className="relative pl-20">
-                  {/* Week indicator */}
+                
                 <div className="absolute left-0 top-0 flex items-center justify-center">
                   <div className="w-16 h-16 rounded-full bg-card border-2 border-primary/40 flex flex-col items-center justify-center">
                     <span className="text-xs text-muted-foreground uppercase">{t.week}</span>
@@ -131,8 +129,8 @@ export function BitacoraSection() {
                   </div>
                 </div>
 
-                {/* Content card */}
                 <div className="p-6 bg-card border border-border rounded-lg hover:border-primary/30 transition-colors duration-300">
+                  
                   <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
                     <h3 className="font-serif text-xl text-foreground">{week.title}</h3>
                     <span className="text-xs text-muted-foreground mt-1 md:mt-0">{week.date}</span>
@@ -147,129 +145,50 @@ export function BitacoraSection() {
                     ))}
                   </ul>
 
-                  {/* Media section for weekly demo */}
                   <div className="mt-6 pt-4 border-t border-border">
                     <p className="text-xs text-muted-foreground mb-3 uppercase tracking-wider">{t.visualDemo}</p>
+
                     {week.images && week.images.length > 0 && (
                       <div className={`grid gap-3 mb-4 ${week.images.length === 1 ? 'grid-cols-1' : week.images.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-3'}`}>
-                        {week.images.map((image: { src: string; alt: string }, imgIndex: number) => (
-                          <div 
-                            key={imgIndex} 
-                            className="relative aspect-video rounded-lg overflow-hidden border border-border hover:border-primary/40 transition-colors cursor-pointer"
-                            onClick={() => setSelectedImage(image.src)}
-                          >
-                            <img
-                              src={image.src}
-                              alt={image.alt}
-                              className="w-full h-full object-cover"
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-2">
-                              <span className="text-xs text-foreground">{image.alt}</span>
-                            </div>
+                        {week.images.map((image: any, imgIndex: number) => (
+                          <div key={imgIndex} className="relative aspect-video rounded-lg overflow-hidden border border-border cursor-pointer"
+                            onClick={() => setSelectedImage(image.src)}>
+                            <img src={image.src} alt={image.alt} className="w-full h-full object-cover" />
                           </div>
                         ))}
                       </div>
                     )}
-                    {week.videos && week.videos.length > 0 && (
-                      <div className={`grid gap-3 ${week.videos.length === 1 ? 'grid-cols-1' : week.videos.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-3'}`}>
-                        {week.videos.map((video: { src: string; alt: string }, vidIndex: number) => (
-                          <div key={vidIndex} className="relative aspect-video rounded-lg overflow-hidden border border-border hover:border-primary/40 transition-colors">
-                            <video
-                              src={video.src}
-                              className="w-full h-full object-cover"
-                              controls
-                              muted
-                              playsInline
-                            />
-                            <div className="mt-2">
-                              <span className="text-xs text-muted-foreground">{video.alt}</span>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                    {!week.images?.length && !week.videos?.length && (
-                      <div className="aspect-video bg-secondary/40 border border-dashed border-border rounded-lg flex flex-col items-center justify-center gap-2">
-                        <svg
-                          className="w-10 h-10 text-muted-foreground/50"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <rect x="3" y="3" width="18" height="18" rx="2" ry="2" strokeWidth="1.5" />
-                          <circle cx="8.5" cy="8.5" r="1.5" strokeWidth="1.5" />
-                          <path d="M21 15l-5-5L5 21" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                        </svg>
-                        <span className="text-xs text-muted-foreground/60">[{t.weekImagePlaceholder} {week.week}]</span>
-                      </div>
-                    )}
-                  </div>
 
-                  {/* Progress indicator */}
-                  <div className="mt-4 pt-4 border-t border-border">
-                    <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
-                      <span>{t.weekProgressLabel}</span>
-                      <span className="text-primary">[{t.progressPlaceholder}]</span>
-                    </div>
-                    <div className="h-1 bg-secondary rounded-full overflow-hidden">
-                      <div
-                        className="h-full bg-primary/60 rounded-full"
-                        style={{ width: `${Math.min(100, (index + 1) * 11)}%` }}
-                      />
-                    </div>
+                    {week.videos && week.videos.length > 0 && (
+                      <div className={`grid gap-3 ${week.videos.length === 1 ? 'grid-cols-1' : 'grid-cols-1 md:grid-cols-2'}`}>
+                        {week.videos.map((video: any, vidIndex: number) => (
+                          <div key={vidIndex} className="relative aspect-video rounded-lg overflow-hidden border border-border">
+                            {video.isYoutube ? (
+                              <iframe src={video.src} className="w-full h-full" allowFullScreen />
+                            ) : (
+                              <>
+                                <video src={video.src} className="w-full h-full object-cover" controls />
+                                <span className="text-xs text-muted-foreground">{video.alt}</span>
+                              </>
+                            )}
+                          </div>
+                        ))}
+                      </div>
+                    )}
+
                   </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-
-        {/* Summary */}
-        <div className="mt-16 p-8 bg-secondary/20 border border-border rounded-lg text-center">
-          <h3 className="font-serif text-2xl text-foreground mb-4">{t.projectStatus}</h3>
-          <div className="grid grid-cols-3 gap-6 mb-6">
-            <div>
-              <span className="block text-3xl font-serif text-primary">10</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">{t.weeksLabel}</span>
-            </div>
-            <div>
-              <span className="block text-3xl font-serif text-primary">[%]</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">{t.completed}</span>
-            </div>
-            <div>
-              <span className="block text-3xl font-serif text-primary">[#]</span>
-              <span className="text-xs text-muted-foreground uppercase tracking-wider">{t.tasksLabel}</span>
-            </div>
-          </div>
-          <p className="text-sm text-muted-foreground">
-            {t.projectContinues} [{t.nextUpdateLabel}]
-          </p>
-        </div>
       </div>
     </section>
 
-    {/* Image Modal */}
     {selectedImage && (
-      <div 
-        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 p-4"
-        onClick={() => setSelectedImage(null)}
-      >
-        <div className="relative max-w-4xl max-h-[90vh] w-full">
-          <button 
-            className="absolute -top-10 right-0 text-white hover:text-primary transition-colors"
-            onClick={() => setSelectedImage(null)}
-          >
-            <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
-          <img 
-            src={selectedImage} 
-            alt="Full size" 
-            className="w-full h-auto max-h-[85vh] object-contain rounded-lg"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
+      <div className="fixed inset-0 bg-black/80 flex items-center justify-center"
+        onClick={() => setSelectedImage(null)}>
+        <img src={selectedImage} className="max-h-[90vh]" />
       </div>
     )}
     </>

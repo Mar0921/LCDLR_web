@@ -10,7 +10,7 @@ import { BitacoraSection } from "@/components/bitacora-section"
 import { EquipoSection } from "@/components/equipo-section"
 import { Footer } from "@/components/footer"
 import { TranslationProvider, useTranslation } from "@/lib/translations"
-import { ScrollAnimation } from "@/components/scroll-animation"
+import { GlowBackground } from "@/components/glow-background"
 
 function HomeContent() {
   const [activeSection, setActiveSection] = useState<"principal" | "bitacora" | "equipo">("principal")
@@ -23,7 +23,8 @@ function HomeContent() {
   }, [])
 
   return (
-    <div className={`min-h-screen bg-background transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+    <div className={`min-h-screen transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}>
+      <GlowBackground />
       <Header 
         activeSection={activeSection} 
         setActiveSection={setActiveSection} 
@@ -34,15 +35,9 @@ function HomeContent() {
       {activeSection === "principal" ? (
         <main>
           <HeroSection />
-          <ScrollAnimation>
-            <StorySection />
-          </ScrollAnimation>
-          <ScrollAnimation delay={100}>
-            <CharactersSection />
-          </ScrollAnimation>
-          <ScrollAnimation delay={200}>
-            <ObjectivesSection />
-          </ScrollAnimation>
+          <StorySection />
+          <CharactersSection />
+          <ObjectivesSection />
         </main>
       ) : activeSection === "bitacora" ? (
         <main>

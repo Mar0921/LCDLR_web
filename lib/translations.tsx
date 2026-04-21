@@ -396,12 +396,12 @@ const translations: Record<Language, Translations> = {
     week10Items: [
       "Downloaded assets for levels 3 (Own Room) and 4 (Sister's Room).",
     ],
-    week11Title: "Visual Development",
+    week11Title: "Teaser Trailer Development",
     week11Items: [
-      "Creation of visual assets for the first room",
-      "Implementation of atmospheric lighting system",
-      "Development of visual effects for character abilities",
-      "Integration of the first definitive UI elements",
+      "Developed the first game teaser trailer",
+      "Applied a model to The Shadow",
+      "Improved previously established stages",
+      "Integrated final models for Lumen and Vyre along with their mechanics"
     ],
     week12Title: "Puzzle System",
     week12Items: [
