@@ -6,7 +6,7 @@ import { ScrollAnimation } from "@/components/scroll-animation"
 export function EquipoSection() {
   const { t } = useTranslation()
   
-  const developers = [
+const developers = [
     {
       name: "Mariana Parra Acosta",
       role: t.developer,
@@ -19,8 +19,8 @@ export function EquipoSection() {
     },
     {
       name: "Estefanía del Amor Restrepo Campo",
-      role: t.designer,
-      description: "Encargada del diseño visual y la ambientación de la mansión.",
+      role: t.developer,
+      description: "Experta en programación de mecánicas interactivas del juego.",
     },
     {
       name: "Daniel Muñoz Delgado",
@@ -50,14 +50,32 @@ export function EquipoSection() {
                 className="group relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent rounded-lg transform group-hover:scale-105 transition-transform duration-500" />
-                <div className="relative p-6 border border-border rounded-lg bg-card h-full flex flex-col">
-                  {/* Photo placeholder */}
-                  <div className="aspect-square mb-4 border border-dashed border-primary/40 rounded-lg bg-secondary/20 flex items-center justify-center">
+                <div className="relative p-6 border border-border rounded-lg bg-card flex flex-col h-[380px]">
+                {/* Photo placeholder */}
+{developer.name === "Estefanía del Amor Restrepo Campo" ? (
+                   <div className="aspect-square mb-4 rounded-lg overflow-hidden h-[180px]">
+                     <img src="/tefa.jpeg" alt="Estefanía del Amor Restrepo Campo" className="w-full h-full object-cover" />
+                   </div>
+                 ) : developer.name === "Mariana Parra Acosta" ? (
+                   <div className="aspect-square mb-4 rounded-lg overflow-hidden h-[180px]">
+                     <img src="/Mariana.jpeg" alt="Mariana Parra Acosta" className="w-full h-full object-cover" />
+                   </div>
+                 ) : developer.name === "Daniel Muñoz Delgado" ? (
+                   <div className="aspect-square mb-4 rounded-lg overflow-hidden h-[180px]">
+                     <img src="/Dani.jpeg" alt="Daniel Muñoz Delgado" className="w-full h-full object-cover" />
+                   </div>
+                 ) : developer.name === "Juan Felipe Fernandez" ? (
+                   <div className="aspect-square mb-4 rounded-lg overflow-hidden h-[180px]">
+                     <img src="/Juanfe.jpeg" alt="Juan Felipe Fernandez" className="w-full h-full object-cover" />
+                   </div>
+                 ) : (
+                  <div className="aspect-square mb-4 border border-dashed border-primary/40 rounded-lg bg-secondary/20 flex items-center justify-center h-[180px]">
                     <div className="text-center">
                       <span className="text-muted-foreground text-sm block">[Photo]</span>
                       <span className="text-xs text-muted-foreground/60 mt-1 block">{developer.role}</span>
                     </div>
                   </div>
+                )}
 
                   <div className="space-y-3 flex-1">
                     <div className="flex items-center gap-2">

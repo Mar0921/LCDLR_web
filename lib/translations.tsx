@@ -10,7 +10,7 @@ interface Translations {
   bitacora: string
   equipo: string
   team: string
-  
+
   // Hero
   gameTitle: string
   gameLogo: string
@@ -18,7 +18,7 @@ interface Translations {
   discoverMore: string
   watchTrailer: string
   scroll: string
-  
+
   // Characters
   protagonists: string
   protagonistsDesc: string
@@ -40,7 +40,7 @@ interface Translations {
   characterOfLight: string
   characterOfShadow: string
   illustrationOf: string
-  
+
   // Story
   theStory: string
   storyImagePlaceholder: string
@@ -53,7 +53,7 @@ interface Translations {
   nostalgiaDesc: string
   theDarkness: string
   darknessDesc: string
-  
+
   // Objectives
   objectives: string
   objectivesDesc: string
@@ -69,7 +69,7 @@ interface Translations {
   objective5Desc: string
   readyToEnter: string
   startAdventure: string
-  
+
   // Bitacora
   devLog: string
   devLogDesc: string
@@ -114,13 +114,13 @@ interface Translations {
   week14Items: string[]
   week15Title: string
   week15Items: string[]
-  
+
   // Equipo
   ourTeam: string
   teamDesc: string
   developer: string
   designer: string
-  
+
   // Footer
   copyright: string
   videoGameProject: string
@@ -140,7 +140,7 @@ const translations: Record<Language, Translations> = {
     bitacora: "Bitácora",
     equipo: "Equipo",
     team: "Equipo",
-    
+
     // Hero
     gameTitle: "La Casa de los Recuerdos",
     gameLogo: "Logo del Juego",
@@ -148,7 +148,7 @@ const translations: Record<Language, Translations> = {
     discoverMore: "Descubrir más",
     watchTrailer: "Ver tráile",
     scroll: "Scroll",
-    
+
     // Characters
     protagonists: "Los Protagonistas",
     protagonistsDesc: "Dos almas conectadas por un destino que se entrelaza entre la luz y la oscuridad.",
@@ -167,7 +167,7 @@ const translations: Record<Language, Translations> = {
     protection: "Protección",
     transformation: "Transformación",
     lightAndShadow: "Luz y Sombra — Un equilibrio necesario",
-    
+
     // Story
     theStory: "La Historia",
     storyImagePlaceholder: "Imagen de la Casa",
@@ -180,7 +180,7 @@ const translations: Record<Language, Translations> = {
     nostalgiaDesc: "Sumérgete en una atmósfera donde cada objeto cuenta una historia de tiempos pasados.",
     theDarkness: "La Oscuridad",
     darknessDesc: "No todos los recuerdos son amables. Algunos prefieren permanecer en las sombras.",
-    
+
     // Objectives
     objectives: "Objetivos del Jugador",
     objectivesDesc: "Tu misión en La Casa de los Recuerdos es restaurar el equilibrio entre la luz y la sombra.",
@@ -196,7 +196,7 @@ const translations: Record<Language, Translations> = {
     objective5Desc: "Descubre qué sucedió realmente en La Casa de los Recuerdos y decide el destino de las almas que aún habitan entre sus muros.",
     readyToEnter: "¿Estás listo para adentrarte en los recuerdos?",
     startAdventure: "Comenzar la aventura",
-    
+
     // Bitacora
     devLog: "Bitácora de Desarrollo",
     devLogDesc: "Registro semanal del progreso en el desarrollo de La Casa de los Recuerdos.",
@@ -242,26 +242,34 @@ const translations: Record<Language, Translations> = {
       "Se mejoraron los escenarios establecidos anteriormente",
       "Se integraron los modelos definitivos para Lumen y Vyre junto con sus mecánicas"
     ],
-    week12Title: "Sistema de Puzzles",
+    week12Title: "Desarrollo escenas",
     week12Items: [
-      "Diseño de los primeros tres puzzles del juego",
-      "Implementación del sistema de interacción con objetos",
-      "Creación del inventario de memorias coleccionables",
-      "Testing de dificultad y ajuste de mecánicas",
+      "Se documentaron y compartieron los siguientes elementos visuales del proyecto:",
+      "Captura del pasillo con la sombra.",
+      "Captura de los cubos ubicados en el cuarto del niño.",
+      "Evidencia de la mecánica de iluminación de Lumen.",
+      "Se completó la escena de las escaleras, dejando estructurado el entorno y sus elementos principales para su integración dentro del flujo del nivel.",
+      "Se implementó una mejora en Vyre relacionada con la interacción de los cubos.",
+      "Se añadió un efecto de golpe junto con efectos de sonido al romper los cubos, con el objetivo de dar mayor coherencia visual y mejorar la retroalimentación al jugador, evitando que la interacción se sintiera plana.",
+      "Se avanzó en la lógica de derrota/reinicio.",
+      "Cuando la sombra entra en contacto con alguno de los jugadores, después de 2 segundos se ejecuta un efecto de fade out y posteriormente el nivel se reinicia automáticamente.",
     ],
-    week13Title: "Narrativa y Audio",
+    week13Title: "Desarrollo escenas",
     week13Items: [
-      "Escritura de los diálogos principales del juego",
-      "Selección y creación de la banda sonora ambiental",
-      "Implementación del sistema de texto y narración",
-      "Grabación de efectos de sonido para interacciones",
+      "Se implementó una escena de prólogo que introduce el inicio de la historia y el contexto narrativo del protagonista.",
+      "Para el prólogo, se seleccionó un modelo de NPC mostrado únicamente de espaldas, con el fin de conservar el misterio alrededor del personaje principal.",
+      "Dentro de la secuencia narrativa, el protagonista llega a la casa y comienza a experimentar recuerdos relacionados con su padre, elementos que sirven como detonante del trauma y del origen de Lumen y Vyre.",
+      "Se completó la transición entre el Nivel 1 y la sección de los pasillos, mejorando la continuidad entre escenarios.",
+      "También se añadió una transición adicional entre el Pasillo 1 y la sala principal.",
+      "Se finalizaron varias animaciones y ajustes visuales relacionados con las nuevas escenas e interacciones del entorno.",
     ],
-    week14Title: "Integración y Testing",
+    week14Title: "Desarrollo escenas",
     week14Items: [
-      "Integración de todos los sistemas desarrollados",
-      "Sesiones de playtesting con usuarios externos",
-      "Corrección de bugs y problemas de rendimiento",
-      "Ajustes de balance y dificultad basados en feedback",
+      "En la zona de pasillos se agregaron nuevas funcionalidades e interacciones del entorno:",
+      "Tablas que caen dinámicamente.",
+      "Un armario con mecánica de caída para generar mayor tensión y ambientación.",
+      "También se agregaron tentáculos a la escena de la hermana, reforzando la ambientación y el enfoque visual de tensión dentro de la narrativa.",
+      "Se realizaron ajustes adicionales de ambientación y efectos visuales para fortalecer la experiencia narrativa y la inmersión del jugador.",
     ],
     week15Title: "Pulido Final",
     week15Items: [
@@ -283,13 +291,13 @@ const translations: Record<Language, Translations> = {
     characterOfLight: "Personaje de luz",
     characterOfShadow: "Personaje de sombra",
     illustrationOf: "Ilustración de",
-    
+
     // Equipo
     ourTeam: "Nuestro Equipo",
     teamDesc: "Los creadores detrás de 'La Casa de los Recuerdos', un equipo apasionado por contar historias interactivas.",
     developer: "Desarrollador",
     designer: "Diseñadora",
-    
+
     // Footer
     copyright: "2024",
     videoGameProject: "Proyecto de Videojuego",
@@ -301,7 +309,7 @@ const translations: Record<Language, Translations> = {
     bitacora: "Dev Log",
     equipo: "Team",
     team: "Team",
-    
+
     // Hero
     gameTitle: "The House of Memories",
     gameLogo: "Game Logo",
@@ -309,7 +317,7 @@ const translations: Record<Language, Translations> = {
     discoverMore: "Discover more",
     watchTrailer: "Watch trailer",
     scroll: "Scroll",
-    
+
     // Characters
     protagonists: "The Protagonists",
     protagonistsDesc: "Two souls connected by a destiny intertwined between light and darkness.",
@@ -328,7 +336,7 @@ const translations: Record<Language, Translations> = {
     protection: "Protection",
     transformation: "Transformation",
     lightAndShadow: "Light and Shadow — A necessary balance",
-    
+
     // Story
     theStory: "The Story",
     storyImagePlaceholder: "House Image",
@@ -341,7 +349,7 @@ const translations: Record<Language, Translations> = {
     nostalgiaDesc: "Immerse yourself in an atmosphere where every object tells a story of times past.",
     theDarkness: "The Darkness",
     darknessDesc: "Not all memories are kind. Some prefer to remain in the shadows.",
-    
+
     // Objectives
     objectives: "Player Objectives",
     objectivesDesc: "Your mission in The House of Memories is to restore the balance between light and shadow.",
@@ -357,7 +365,7 @@ const translations: Record<Language, Translations> = {
     objective5Desc: "Discover what really happened in The House of Memories and decide the fate of the souls that still inhabit its walls.",
     readyToEnter: "Are you ready to enter the memories?",
     startAdventure: "Start the adventure",
-    
+
     // Bitacora
     devLog: "Development Log",
     devLogDesc: "Weekly record of progress in the development of The House of Memories.",
@@ -403,26 +411,36 @@ const translations: Record<Language, Translations> = {
       "Improved previously established stages",
       "Integrated final models for Lumen and Vyre along with their mechanics"
     ],
-    week12Title: "Puzzle System",
+    week12Title: "Scene Development and Mechanics",
     week12Items: [
-      "Design of the first three puzzles in the game",
-      "Implementation of the object interaction system",
-      "Creation of the collectible memories inventory",
-      "Testing of difficulty and mechanic adjustments",
+      "The following visual elements of the project were documented and shared:",
+      "Hallway capture with the shadow.",
+      "Capture of the cubes located in the boy's room.",
+      "Evidence of Lumen's lighting mechanics.",
+      "The staircase scene was completed, leaving the environment and its main elements structured for integration into the level flow.",
+      "An improvement related to Vyre's cube interaction was implemented.",
+      "A hit effect and sound effects were added when breaking cubes to improve visual feedback and avoid flat interactions.",
+      "Progress was made on the defeat/restart logic.",
+      "When the shadow touches one of the players, after 2 seconds a fade out effect is executed and the level automatically restarts.",
     ],
-    week13Title: "Narrative and Audio",
+
+    week13Title: "Prologue and Narrative Transitions",
     week13Items: [
-      "Writing of the main dialogues of the game",
-      "Selection and creation of the ambient soundtrack",
-      "Implementation of the text and narration system",
-      "Recording of sound effects for interactions",
+      "A prologue scene introducing the beginning of the story and the protagonist's narrative context was implemented.",
+      "For the prologue, an NPC model shown only from behind was selected to preserve the mystery around the main character.",
+      "Within the narrative sequence, the protagonist arrives home and begins experiencing memories related to his father, elements that trigger the trauma and the origin of Lumen and Vyre.",
+      "The transition between Level 1 and the hallway section was completed, improving continuity between scenarios.",
+      "An additional transition between Hallway 1 and the main room was also added.",
+      "Several animations and visual adjustments related to the new scenes and environment interactions were finalized.",
     ],
-    week14Title: "Integration and Testing",
+
+    week14Title: "Interactions and Atmosphere",
     week14Items: [
-      "Integration of all developed systems",
-      "Playtesting sessions with external users",
-      "Bug correction and performance issues",
-      "Balance and difficulty adjustments based on feedback",
+      "New hallway functionalities and environmental interactions were added.",
+      "Dynamically falling wooden boards.",
+      "A wardrobe with a falling mechanic to create greater tension and atmosphere.",
+      "Tentacles were also added to the sister's scene, reinforcing the atmosphere and visual tension within the narrative.",
+      "Additional atmosphere and visual effect adjustments were made to strengthen narrative immersion and player experience.",
     ],
     week15Title: "Final Polish",
     week15Items: [
@@ -444,13 +462,13 @@ const translations: Record<Language, Translations> = {
     characterOfLight: "Character of light",
     characterOfShadow: "Character of shadow",
     illustrationOf: "Illustration of",
-    
+
     // Team
     ourTeam: "Our Team",
     teamDesc: "The creators behind 'The House of Memories', a team passionate about telling interactive stories.",
     developer: "Developer",
     designer: "Designer",
-    
+
     // Footer
     copyright: "2024",
     videoGameProject: "Video Game Project",
@@ -462,13 +480,13 @@ const TranslationContext = createContext<TranslationContextType | undefined>(und
 
 export function TranslationProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>("es")
-  
+
   const value: TranslationContextType = {
     language,
     setLanguage,
     t: translations[language],
   }
-  
+
   return (
     <TranslationContext.Provider value={value}>
       {children}
