@@ -120,6 +120,10 @@ interface Translations {
   teamDesc: string
   developer: string
   designer: string
+  marianaDesc: string
+  juanFelipeDesc: string
+  estefaniaDesc: string
+  danielDesc: string
 
   // Footer
   copyright: string
@@ -297,6 +301,10 @@ const translations: Record<Language, Translations> = {
     teamDesc: "Los creadores detrás de 'La Casa de los Recuerdos', un equipo apasionado por contar historias interactivas.",
     developer: "Desarrollador",
     designer: "Diseñadora",
+    marianaDesc: "Especializada en diseño de personajes y narrativa interactiva.",
+    juanFelipeDesc: "Experto en mecánicas de juego y sistemas de navegación.",
+    estefaniaDesc: "Experta en programación de mecánicas interactivas del juego.",
+    danielDesc: "Responsable del sistema de puzzles y coleccionables.",
 
     // Footer
     copyright: "2024",
@@ -468,6 +476,10 @@ const translations: Record<Language, Translations> = {
     teamDesc: "The creators behind 'The House of Memories', a team passionate about telling interactive stories.",
     developer: "Developer",
     designer: "Designer",
+    marianaDesc: "Specialized in character design and interactive storytelling.",
+    juanFelipeDesc: "Expert in game mechanics and navigation systems.",
+    estefaniaDesc: "Expert in programming interactive game mechanics.",
+    danielDesc: "In charge of the puzzle and collectible system.",
 
     // Footer
     copyright: "2024",

@@ -164,12 +164,28 @@ export function BitacoraSection() {
       title: t.week13Title,
       date: t.datePlaceholder,
       items: t.week13Items || [],
+      images: [
+        {
+          src: "/prologo.jpeg",
+          alt: isEnglish ? "Prologue scene - NPC from behind" : "Escena de prólogo - NPC de espaldas",
+        },
+      ],
     },
     {
       week: 14,
       title: t.week14Title,
       date: t.datePlaceholder,
       items: t.week14Items || [],
+      images: [
+        {
+          src: "/Armario.jpeg",
+          alt: isEnglish ? "Wardrobe with falling mechanic" : "Armario con mecánica de caída",
+        },
+        {
+          src: "/Tablaaa.jpeg",
+          alt: isEnglish ? "Falling wooden boards" : "Tablas que caen",
+        },
+      ],
     },
     {
       week: 15,
