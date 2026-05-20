@@ -17,6 +17,8 @@ interface Translations {
   heroDescription: string
   discoverMore: string
   watchTrailer: string
+  watchTeaser: string
+  teaserUrl: string
   scroll: string
 
   // Characters
@@ -151,6 +153,8 @@ const translations: Record<Language, Translations> = {
     heroDescription: "Un viaje a través de la memoria, donde cada habitación guarda un secreto y cada recuerdo puede ser tanto una bendición como una maldición.",
     discoverMore: "Descubrir más",
     watchTrailer: "Ver tráile",
+    watchTeaser: "Ver Teaser",
+    teaserUrl: "https://www.youtube.com/watch?v=Lk8cOeoH0R4",
     scroll: "Scroll",
 
     // Characters
@@ -324,6 +328,8 @@ const translations: Record<Language, Translations> = {
     heroDescription: "A journey through memory, where each room holds a secret and each memory can be both a blessing and a curse.",
     discoverMore: "Discover more",
     watchTrailer: "Watch trailer",
+    watchTeaser: "Watch Teaser",
+    teaserUrl: "https://www.youtube.com/watch?v=Lk8cOeoH0R4",
     scroll: "Scroll",
 
     // Characters

@@ -15,8 +15,12 @@ export function StorySection() {
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Story image placeholder */}
-          <div className="aspect-[4/3] border border-dashed border-primary/30 rounded-lg bg-secondary/20 flex items-center justify-center">
-            <span className="text-muted-foreground text-sm">[{t.storyImagePlaceholder}]</span>
+          <div className="aspect-[4/3] border border-border rounded-lg overflow-hidden">
+            <img
+              src="/Casa.png"
+              alt={t.storyImagePlaceholder}
+              className="w-full h-full object-cover"
+            />
           </div>
 
           <div className="space-y-6">

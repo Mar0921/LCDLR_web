@@ -47,10 +47,10 @@ export function HeroSection() {
       </div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto">
-        {/* Game logo placeholder */}
+        {/* Game logo */}
         <div className="mb-8 flex justify-center">
-          <div className="w-48 h-48 border-2 border-dashed border-primary/40 rounded-lg flex items-center justify-center bg-secondary/20">
-            <span className="text-muted-foreground text-sm">[{t.gameLogo}]</span>
+          <div className="w-48 h-48 border border-border rounded-lg overflow-hidden bg-secondary/20">
+            <img src="/logo.png" alt={t.gameLogo} className="w-full h-full object-cover" />
           </div>
         </div>
 
@@ -66,9 +66,14 @@ export function HeroSection() {
           <button className="px-8 py-3 bg-primary text-primary-foreground font-medium tracking-wide transition-all duration-300 hover:bg-primary/90 hover:scale-105">
             {t.discoverMore}
           </button>
-          <button className="px-8 py-3 border border-border text-foreground font-medium tracking-wide transition-all duration-300 hover:bg-secondary hover:border-primary/50">
-            {t.watchTrailer}
-          </button>
+          <a
+            href={t.teaserUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-3 border border-border text-foreground font-medium tracking-wide transition-all duration-300 hover:bg-secondary hover:border-primary/50 inline-block text-center cursor-pointer"
+          >
+            {t.watchTeaser}
+          </a>
         </div>
 
         {/* Scroll indicator */}
