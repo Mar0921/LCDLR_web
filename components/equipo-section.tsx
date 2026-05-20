@@ -54,7 +54,7 @@ export function EquipoSection() {
               <div className="group relative">
                 <div className="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent rounded-lg transform group-hover:scale-105 transition-transform duration-500" />
                 <div className="relative p-6 border border-border rounded-lg bg-card flex flex-col h-[380px]">
-                  {developer.name === "Estefanía del Amor Restrepo Campo" ? (
+                  {developer.name === "Estefanía del Amor Restrepo" ? (
                     <div className="aspect-square mb-4 rounded-lg overflow-hidden h-[180px]">
                       <img src="/tefa.jpeg" alt="Estefanía del Amor Restrepo Campo" className="w-full h-full object-cover" />
                     </div>
