@@ -192,6 +192,56 @@ export function BitacoraSection() {
       title: t.week15Title,
       date: t.datePlaceholder,
       items: t.week15Items || [],
+      images: [
+        {
+          src: "/3recuerdo.jpeg",
+          alt: isEnglish
+            ? "Third memory scene"
+            : "Tercera escena de recuerdo",
+        },
+        {
+          src: "/escena3.jpeg",
+          alt: isEnglish
+            ? "Scene 3"
+            : "Escena 3",
+        },
+        {
+          src: "/epilogo.jpeg",
+          alt: isEnglish
+            ? "Epilogue scene"
+            : "Escena de epílogo",
+        },
+        {
+          src: "/batallaprevia.jpeg",
+          alt: isEnglish
+            ? "Pre-battle scene"
+            : "Escena previa a la batalla",
+        },
+        {
+          src: "/batalla_final.jpeg",
+          alt: isEnglish
+            ? "Final battle scene"
+            : "Escena de batalla final",
+        },
+        {
+          src: "/creditos.jpeg",
+          alt: isEnglish
+            ? "Credits scene"
+            : "Escena de créditos",
+        },
+        {
+          src: "/menu_diseño.jpeg",
+          alt: isEnglish
+            ? "Menu design"
+            : "Diseño del menú",
+        },
+      ],
+    },
+    {
+      week: 16,
+      title: t.week16Title,
+      date: t.datePlaceholder,
+      items: t.week16Items || [],
     },
   ]
 

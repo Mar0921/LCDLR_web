@@ -112,8 +112,12 @@ interface Translations {
   week13Items: string[]
   week14Title: string
   week14Items: string[]
-  week15Title: string
-  week15Items: string[]
+    week15Title: string
+    week15Items: string[]
+    week16Title: string
+    week16Items: string[]
+    week16Title: string
+    week16Items: string[]
 
   // Equipo
   ourTeam: string
@@ -204,8 +208,8 @@ const translations: Record<Language, Translations> = {
     // Bitacora
     devLog: "Bitácora de Desarrollo",
     devLogDesc: "Registro semanal del progreso en el desarrollo de La Casa de los Recuerdos.",
-    weekRange: "Semana 7 - 15",
-    weeksOfDev: "10 semanas de desarrollo (incluye Semana Santa)",
+    weekRange: "Semana 7 - 16",
+    weeksOfDev: "11 semanas de desarrollo (incluye Semana Santa)",
     week: "Sem",
     weekProgress: "Progreso de la semana",
     progress: "Completado",
@@ -275,12 +279,23 @@ const translations: Record<Language, Translations> = {
       "También se agregaron tentáculos a la escena de la hermana, reforzando la ambientación y el enfoque visual de tensión dentro de la narrativa.",
       "Se realizaron ajustes adicionales de ambientación y efectos visuales para fortalecer la experiencia narrativa y la inmersión del jugador.",
     ],
-    week15Title: "Pulido Final",
-    week15Items: [
-      "Optimización general del rendimiento del juego",
-      "Revisión final de todos los assets visuales",
-      "Preparación de la documentación del proyecto",
-      "Compilación de la versión final para presentación",
+week15Title: "Cambios de diseño",
+     week15Items: [
+       "Cambios de diseño",
+       "Creación de recuerdo con filtros de camara",
+       "Mecanicas escena 3",
+       "Creación del Epilogo",
+       "Mecanicas escena final (cuarto hermana)",
+       "Batalla final",
+       "Mejora de menu principal",
+       "Escena de creditos al finalizar el juego",
+     ],
+    week16Title: "Pruebas finales y documentación",
+    week16Items: [
+      "Pruebas exhaustivas de jugabilidad y detección de errores",
+      "Optimización final de tiempos de carga y rendimiento",
+      "Creación de manual de usuario y documentación técnica",
+      "Preparación de materiales promocionales y capturas de pantalla",
     ],
     datePlaceholder: "Fecha placeholder",
     progressPlaceholder: "Porcentaje placeholder",
@@ -377,8 +392,8 @@ const translations: Record<Language, Translations> = {
     // Bitacora
     devLog: "Development Log",
     devLogDesc: "Weekly record of progress in the development of The House of Memories.",
-    weekRange: "Week 7 - 15",
-    weeksOfDev: "10 weeks of development (includes Holy Week)",
+    weekRange: "Week 7 - 16",
+    weeksOfDev: "11 weeks of development (includes Holy Week)",
     week: "Week",
     weekProgress: "Weekly progress",
     progress: "Progress",
@@ -450,13 +465,17 @@ const translations: Record<Language, Translations> = {
       "Tentacles were also added to the sister's scene, reinforcing the atmosphere and visual tension within the narrative.",
       "Additional atmosphere and visual effect adjustments were made to strengthen narrative immersion and player experience.",
     ],
-    week15Title: "Final Polish",
-    week15Items: [
-      "General optimization of game performance",
-      "Final review of all visual assets",
-      "Preparation of project documentation",
-      "Compilation of the final version for presentation",
-    ],
+week15Title: "Design Changes",
+     week15Items: [
+       "Design changes",
+       "Memory creation with camera filters",
+       "Scene 3 mechanics",
+       "Epilogue creation",
+       "Final scene mechanics (sister's room)",
+       "Final battle",
+       "Main menu improvement",
+       "Credits scene at game completion",
+     ],
     datePlaceholder: "Date placeholder",
     progressPlaceholder: "Percentage placeholder",
     weekProgressLabel: "Progress of the week",
