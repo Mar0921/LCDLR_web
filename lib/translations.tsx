@@ -67,8 +67,6 @@ interface Translations {
   objective3Desc: string
   objective4Title: string
   objective4Desc: string
-  objective5Title: string
-  objective5Desc: string
   readyToEnter: string
   startAdventure: string
 
@@ -171,9 +169,9 @@ const translations: Record<Language, Translations> = {
     vyreTitle: "Custodio de las memorias olvidadas",
     vyreDesc: "Vyre habita en las sombras de la casa, protegiendo los recuerdos que fueron enterrados por dolor o vergüenza. No es malvado, sino incomprendido. Su rol es recordarnos que incluso las memorias oscuras son parte esencial de quienes somos.",
     vyreAbilities: "Habilidades",
-    hiding: "Ocultamiento",
-    protection: "Protección",
-    transformation: "Transformación",
+    hiding: "Fuerza",
+    protection: "Rapidez",
+    transformation: "Agilidad",
     lightAndShadow: "Luz y Sombra — Un equilibrio necesario",
 
     // Story
@@ -196,12 +194,10 @@ const translations: Record<Language, Translations> = {
     objective1Desc: "Recorre cada habitación de La Casa de los Recuerdos. Cada estancia guarda fragmentos de historias olvidadas que deberás descubrir y conectar.",
     objective2Title: "Descifrar los Acertijos",
     objective2Desc: "Resuelve puzzles emocionales y mentales que te permitirán desbloquear nuevas áreas y revelar secretos ocultos en las paredes de la mansión.",
-    objective3Title: "Recolectar Memorias",
-    objective3Desc: "Encuentra y colecciona fragmentos de recuerdos dispersos. Cada memoria recuperada te acerca más a comprender la verdadera historia de la casa.",
-    objective4Title: "Equilibrar Luz y Sombra",
-    objective4Desc: "Aprende a utilizar las habilidades de Lumen y Vyre en armonía. Solo el balance entre ambas fuerzas te permitirá acceder a la verdad final.",
-    objective5Title: "Revelar el Secreto",
-    objective5Desc: "Descubre qué sucedió realmente en La Casa de los Recuerdos y decide el destino de las almas que aún habitan entre sus muros.",
+    objective3Title: "Equilibrar Luz y Sombra",
+    objective3Desc: "Aprende a utilizar las habilidades de Lumen y Vyre en armonía. Solo el balance entre ambas fuerzas te permitirá acceder a la verdad final.",
+    objective4Title: "Revelar el Secreto",
+    objective4Desc: "Descubre qué sucedió realmente en La Casa de los Recuerdos y decide el destino de las almas que aún habitan entre sus muros.",
     readyToEnter: "¿Estás listo para adentrarte en los recuerdos?",
     startAdventure: "Comenzar la aventura",
 
@@ -346,9 +342,9 @@ const translations: Record<Language, Translations> = {
     vyreTitle: "Keeper of forgotten memories",
     vyreDesc: "Vyre dwells in the shadows of the house, protecting memories buried by pain and shame. He is not evil, but misunderstood. His role is to remind us that even dark memories are an essential part of who we are.",
     vyreAbilities: "Abilities",
-    hiding: "Hiding",
-    protection: "Protection",
-    transformation: "Transformation",
+    hiding: "Strength",
+    protection: "Speed",
+    transformation: "Agility",
     lightAndShadow: "Light and Shadow — A necessary balance",
 
     // Story
@@ -371,12 +367,10 @@ const translations: Record<Language, Translations> = {
     objective1Desc: "Explore every room of The House of Memories. Each chamber holds fragments of forgotten stories that you must discover and connect.",
     objective2Title: "Decipher the Puzzles",
     objective2Desc: "Solve emotional and mental puzzles that will unlock new areas and reveal secrets hidden in the mansion walls.",
-    objective3Title: "Collect Memories",
-    objective3Desc: "Find and collect scattered memory fragments. Each recovered memory brings you closer to understanding the true story of the house.",
-    objective4Title: "Balance Light and Shadow",
-    objective4Desc: "Learn to use Lumen and Vyre's abilities in harmony. Only the balance between both forces will grant you access to the final truth.",
-    objective5Title: "Reveal the Secret",
-    objective5Desc: "Discover what really happened in The House of Memories and decide the fate of the souls that still inhabit its walls.",
+    objective3Title: "Balance Light and Shadow",
+    objective3Desc: "Learn to use Lumen and Vyre's abilities in harmony. Only the balance between both forces will grant you access to the final truth.",
+    objective4Title: "Reveal the Secret",
+    objective4Desc: "Discover what really happened in The House of Memories and decide the fate of the souls that still inhabit its walls.",
     readyToEnter: "Are you ready to enter the memories?",
     startAdventure: "Start the adventure",
 

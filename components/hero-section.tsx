@@ -62,7 +62,7 @@ export function HeroSection() {
           {t.heroDescription}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center mb-32">
           <button className="px-8 py-3 bg-primary text-primary-foreground font-medium tracking-wide transition-all duration-300 hover:bg-primary/90 hover:scale-105">
             {t.discoverMore}
           </button>
@@ -77,7 +77,7 @@ export function HeroSection() {
         </div>
 
         {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-muted-foreground mt-16">
           <span className="text-xs tracking-widest uppercase">{t.scroll}</span>
           <div className="w-px h-8 bg-gradient-to-b from-primary/60 to-transparent animate-pulse" />
         </div>

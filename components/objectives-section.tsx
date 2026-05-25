@@ -23,11 +23,6 @@ export function ObjectivesSection() {
       title: t.objective4Title,
       description: t.objective4Desc,
     },
-    {
-      number: "05",
-      title: t.objective5Title,
-      description: t.objective5Desc,
-    },
   ]
 
   return (

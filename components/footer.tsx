@@ -54,7 +54,7 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <span>© {t.copyright} [Team Name]</span>
+            <span>© 2026 MAGO</span>
             <span className="hidden md:inline text-border">|</span>
             <span>{t.videoGameProject}</span>
           </div>
