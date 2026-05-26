@@ -112,12 +112,10 @@ interface Translations {
   week13Items: string[]
   week14Title: string
   week14Items: string[]
-    week15Title: string
-    week15Items: string[]
-    week16Title: string
-    week16Items: string[]
-    week16Title: string
-    week16Items: string[]
+  week15Title: string
+  week15Items: string[]
+  week16Title: string
+  week16Items: string[]
 
   // Equipo
   ourTeam: string
@@ -152,7 +150,8 @@ const translations: Record<Language, Translations> = {
     // Hero
     gameTitle: "La Casa de los Recuerdos",
     gameLogo: "Logo del Juego",
-    heroDescription: "Un viaje a través de la memoria, donde cada habitación guarda un secreto y cada recuerdo puede ser tanto una bendición como una maldición.",
+    heroDescription:
+      "Un viaje a través de la memoria, donde cada habitación guarda un secreto y cada recuerdo puede ser tanto una bendición como una maldición.",
     discoverMore: "Descubrir más",
     watchTrailer: "Ver tráile",
     watchTeaser: "Ver Teaser",
@@ -161,53 +160,70 @@ const translations: Record<Language, Translations> = {
 
     // Characters
     protagonists: "Los Protagonistas",
-    protagonistsDesc: "Dos almas conectadas por un destino que se entrelaza entre la luz y la oscuridad.",
+    protagonistsDesc:
+      "Dos almas conectadas por un destino que se entrelaza entre la luz y la oscuridad.",
     lumen: "Lumen",
     lumenTitle: "Guardián de los recuerdos luminosos",
-    lumenDesc: "Lumen representa la esperanza y la claridad en medio de la oscuridad. Como guía espiritual de la casa, su propósito es ayudar a los visitantes a encontrar los recuerdos que traen paz y comprensión. Sin embargo, su luz también puede revelar verdades que algunos prefieren olvidar.",
+    lumenDesc:
+      "Lumen representa la esperanza y la claridad en medio de la oscuridad. Como guía espiritual de la casa, su propósito es ayudar a los visitantes a encontrar los recuerdos que traen paz y comprensión. Sin embargo, su luz también puede revelar verdades que algunos prefieren olvidar.",
     lumenAbilities: "Habilidades",
     illumination: "Iluminación",
     revelation: "Revelación",
     healing: "Sanación",
     vyre: "Vyre",
     vyreTitle: "Custodio de las memorias olvidadas",
-    vyreDesc: "Vyre habita en las sombras de la casa, protegiendo los recuerdos que fueron enterrados por dolor o vergüenza. No es malvado, sino incomprendido. Su rol es recordarnos que incluso las memorias oscuras son parte esencial de quienes somos.",
+    vyreDesc:
+      "Vyre habita en las sombras de la casa, protegiendo los recuerdos que fueron enterrados por dolor o vergüenza. No es malvado, sino incomprendido. Su rol es recordarnos que incluso las memorias oscuras son parte esencial de quienes somos.",
     vyreAbilities: "Habilidades",
     hiding: "Fuerza",
     protection: "Rapidez",
     transformation: "Agilidad",
     lightAndShadow: "Luz y Sombra — Un equilibrio necesario",
+    characterOfLight: "Personaje de luz",
+    characterOfShadow: "Personaje de sombra",
+    illustrationOf: "Ilustración de",
 
     // Story
     theStory: "La Historia",
     storyImagePlaceholder: "Imagen de la Casa",
-    storyParagraph1: "En las profundidades de un pueblo olvidado por el tiempo, se alza una mansión cuyas paredes guardan los ecos de memorias fragmentadas. La Casa de los Recuerdos no es solo un lugar, es un laberinto de emociones donde el pasado y el presente se entrelazan de maneras inexplicables.",
-    storyParagraph2: "Cada habitación representa un capítulo de una historia olvidada. Los jugadores deberán explorar cada rincón, descifrar acertijos emocionales y enfrentarse a las sombras de recuerdos que prefirieron quedar enterrados.",
+    storyParagraph1:
+      "En las profundidades de un pueblo olvidado por el tiempo, se alza una mansión cuyas paredes guardan los ecos de memorias fragmentadas. La Casa de los Recuerdos no es solo un lugar, es un laberinto de emociones donde el pasado y el presente se entrelazan de maneras inexplicables.",
+    storyParagraph2:
+      "Cada habitación representa un capítulo de una historia olvidada. Los jugadores deberán explorar cada rincón, descifrar acertijos emocionales y enfrentarse a las sombras de recuerdos que prefirieron quedar enterrados.",
     storyQuote: "Los recuerdos no mueren, solo esperan ser encontrados.",
     theMystery: "El Misterio",
-    mysteryDesc: "Descubre los secretos ocultos tras cada puerta cerrada y cada fotografía desvanecida.",
+    mysteryDesc:
+      "Descubre los secretos ocultos tras cada puerta cerrada y cada fotografía desvanecida.",
     theNostalgia: "La Nostalgia",
-    nostalgiaDesc: "Sumérgete en una atmósfera donde cada objeto cuenta una historia de tiempos pasados.",
+    nostalgiaDesc:
+      "Sumérgete en una atmósfera donde cada objeto cuenta una historia de tiempos pasados.",
     theDarkness: "La Oscuridad",
-    darknessDesc: "No todos los recuerdos son amables. Algunos prefieren permanecer en las sombras.",
+    darknessDesc:
+      "No todos los recuerdos son amables. Algunos prefieren permanecer en las sombras.",
 
     // Objectives
     objectives: "Objetivos del Jugador",
-    objectivesDesc: "Tu misión en La Casa de los Recuerdos es restaurar el equilibrio entre la luz y la sombra.",
+    objectivesDesc:
+      "Tu misión en La Casa de los Recuerdos es restaurar el equilibrio entre la luz y la sombra.",
     objective1Title: "Explorar la Mansión",
-    objective1Desc: "Recorre cada habitación de La Casa de los Recuerdos. Cada estancia guarda fragmentos de historias olvidadas que deberás descubrir y conectar.",
+    objective1Desc:
+      "Recorre cada habitación de La Casa de los Recuerdos. Cada estancia guarda fragmentos de historias olvidadas que deberás descubrir y conectar.",
     objective2Title: "Descifrar los Acertijos",
-    objective2Desc: "Resuelve puzzles emocionales y mentales que te permitirán desbloquear nuevas áreas y revelar secretos ocultos en las paredes de la mansión.",
+    objective2Desc:
+      "Resuelve puzzles emocionales y mentales que te permitirán desbloquear nuevas áreas y revelar secretos ocultos en las paredes de la mansión.",
     objective3Title: "Equilibrar Luz y Sombra",
-    objective3Desc: "Aprende a utilizar las habilidades de Lumen y Vyre en armonía. Solo el balance entre ambas fuerzas te permitirá acceder a la verdad final.",
+    objective3Desc:
+      "Aprende a utilizar las habilidades de Lumen y Vyre en armonía. Solo el balance entre ambas fuerzas te permitirá acceder a la verdad final.",
     objective4Title: "Revelar el Secreto",
-    objective4Desc: "Descubre qué sucedió realmente en La Casa de los Recuerdos y decide el destino de las almas que aún habitan entre sus muros.",
+    objective4Desc:
+      "Descubre qué sucedió realmente en La Casa de los Recuerdos y decide el destino de las almas que aún habitan entre sus muros.",
     readyToEnter: "¿Estás listo para adentrarte en los recuerdos?",
     startAdventure: "Comenzar la aventura",
 
     // Bitacora
     devLog: "Bitácora de Desarrollo",
-    devLogDesc: "Registro semanal del progreso en el desarrollo de La Casa de los Recuerdos.",
+    devLogDesc:
+      "Registro semanal del progreso en el desarrollo de La Casa de los Recuerdos.",
     weekRange: "Semana 7 - 16",
     weeksOfDev: "11 semanas de desarrollo (incluye Semana Santa)",
     week: "Sem",
@@ -216,9 +232,21 @@ const translations: Record<Language, Translations> = {
     completed: "Completado",
     tasks: "Tareas",
     projectStatus: "Estado del Proyecto",
-    developmentContinues: "El desarrollo continúa según lo planificado. Próxima actualización:",
+    developmentContinues:
+      "El desarrollo continúa según lo planificado. Próxima actualización:",
     nextUpdate: "Próxima actualización",
     visualDemo: "Demostración visual",
+    datePlaceholder: "Fecha placeholder",
+    progressPlaceholder: "Porcentaje placeholder",
+    weekProgressLabel: "Progreso de la semana",
+    weeksLabel: "Semanas",
+    tasksLabel: "Tareas",
+    projectContinues:
+      "El desarrollo continúa según lo planificado. Próxima actualización:",
+    nextUpdateLabel: "Próxima actualización",
+    weekImagePlaceholder: "Imagen de avance - Semana",
+    finalWeek: "Final",
+    weekSanta: "Santa",
     week7Title: "Configuración del Proyecto y Primer Nivel",
     week7Items: [
       "Se creó el proyecto, configuró el repositorio y se organizón la escena del menú y el primer nivel, implementando los assets básicos de la cocina.",
@@ -248,7 +276,7 @@ const translations: Record<Language, Translations> = {
       "Se desarrolló el primer teaser trailer del juego",
       "Se aplicó un modelo a La Sombra",
       "Se mejoraron los escenarios establecidos anteriormente",
-      "Se integraron los modelos definitivos para Lumen y Vyre junto con sus mecánicas"
+      "Se integraron los modelos definitivos para Lumen y Vyre junto con sus mecánicas",
     ],
     week12Title: "Desarrollo escenas",
     week12Items: [
@@ -279,17 +307,17 @@ const translations: Record<Language, Translations> = {
       "También se agregaron tentáculos a la escena de la hermana, reforzando la ambientación y el enfoque visual de tensión dentro de la narrativa.",
       "Se realizaron ajustes adicionales de ambientación y efectos visuales para fortalecer la experiencia narrativa y la inmersión del jugador.",
     ],
-week15Title: "Cambios de diseño",
-     week15Items: [
-       "Cambios de diseño",
-       "Creación de recuerdo con filtros de camara",
-       "Mecanicas escena 3",
-       "Creación del Epilogo",
-       "Mecanicas escena final (cuarto hermana)",
-       "Batalla final",
-       "Mejora de menu principal",
-       "Escena de creditos al finalizar el juego",
-     ],
+    week15Title: "Cambios de diseño",
+    week15Items: [
+      "Cambios de diseño",
+      "Creación de recuerdo con filtros de camara",
+      "Mecanicas escena 3",
+      "Creación del Epilogo",
+      "Mecanicas escena final (cuarto hermana)",
+      "Batalla final",
+      "Mejora de menu principal",
+      "Escena de creditos al finalizar el juego",
+    ],
     week16Title: "Pruebas finales y documentación",
     week16Items: [
       "Pruebas exhaustivas de jugabilidad y detección de errores",
@@ -297,23 +325,11 @@ week15Title: "Cambios de diseño",
       "Creación de manual de usuario y documentación técnica",
       "Preparación de materiales promocionales y capturas de pantalla",
     ],
-    datePlaceholder: "Fecha placeholder",
-    progressPlaceholder: "Porcentaje placeholder",
-    weekProgressLabel: "Progreso de la semana",
-    weeksLabel: "Semanas",
-    tasksLabel: "Tareas",
-    projectContinues: "El desarrollo continúa según lo planificado. Próxima actualización:",
-    nextUpdateLabel: "Próxima actualización",
-    weekImagePlaceholder: "Imagen de avance - Semana",
-    finalWeek: "Final",
-    weekSanta: "Santa",
-    characterOfLight: "Personaje de luz",
-    characterOfShadow: "Personaje de sombra",
-    illustrationOf: "Ilustración de",
 
     // Equipo
     ourTeam: "Nuestro Equipo",
-    teamDesc: "Los creadores detrás de 'La Casa de los Recuerdos', un equipo apasionado por contar historias interactivas.",
+    teamDesc:
+      "Los creadores detrás de 'La Casa de los Recuerdos', un equipo apasionado por contar historias interactivas.",
     developer: "Desarrollador",
     designer: "Diseñadora",
     marianaDesc: "Especializada en diseño de personajes y narrativa interactiva.",
@@ -324,7 +340,8 @@ week15Title: "Cambios de diseño",
     // Footer
     copyright: "2024",
     videoGameProject: "Proyecto de Videojuego",
-    footerQuote: "Los recuerdos son las estrellas que iluminan el cielo de nuestra memoria.",
+    footerQuote:
+      "Los recuerdos son las estrellas que iluminan el cielo de nuestra memoria.",
   },
   en: {
     // Header
@@ -336,7 +353,8 @@ week15Title: "Cambios de diseño",
     // Hero
     gameTitle: "The House of Memories",
     gameLogo: "Game Logo",
-    heroDescription: "A journey through memory, where each room holds a secret and each memory can be both a blessing and a curse.",
+    heroDescription:
+      "A journey through memory, where each room holds a secret and each memory can be both a blessing and a curse.",
     discoverMore: "Discover more",
     watchTrailer: "Watch trailer",
     watchTeaser: "Watch Teaser",
@@ -345,53 +363,69 @@ week15Title: "Cambios de diseño",
 
     // Characters
     protagonists: "The Protagonists",
-    protagonistsDesc: "Two souls connected by a destiny intertwined between light and darkness.",
+    protagonistsDesc:
+      "Two souls connected by a destiny intertwined between light and darkness.",
     lumen: "Lumen",
     lumenTitle: "Guardian of luminous memories",
-    lumenDesc: "Lumen represents hope and clarity in the midst of darkness. As the spiritual guide of the house, his purpose is to help visitors find memories that bring peace and understanding. However, his light can also reveal truths some prefer to forget.",
+    lumenDesc:
+      "Lumen represents hope and clarity in the midst of darkness. As the spiritual guide of the house, his purpose is to help visitors find memories that bring peace and understanding. However, his light can also reveal truths some prefer to forget.",
     lumenAbilities: "Abilities",
     illumination: "Illumination",
     revelation: "Revelation",
     healing: "Healing",
     vyre: "Vyre",
     vyreTitle: "Keeper of forgotten memories",
-    vyreDesc: "Vyre dwells in the shadows of the house, protecting memories buried by pain and shame. He is not evil, but misunderstood. His role is to remind us that even dark memories are an essential part of who we are.",
+    vyreDesc:
+      "Vyre dwells in the shadows of the house, protecting memories buried by pain and shame. He is not evil, but misunderstood. His role is to remind us that even dark memories are an essential part of who we are.",
     vyreAbilities: "Abilities",
     hiding: "Strength",
     protection: "Speed",
     transformation: "Agility",
     lightAndShadow: "Light and Shadow — A necessary balance",
+    characterOfLight: "Character of light",
+    characterOfShadow: "Character of shadow",
+    illustrationOf: "Illustration of",
 
     // Story
     theStory: "The Story",
     storyImagePlaceholder: "House Image",
-    storyParagraph1: "In the depths of a town forgotten by time, stands a mansion whose walls hold echoes of fragmented memories. The House of Memories is not just a place, it's a labyrinth of emotions where past and present intertwine in inexplicable ways.",
-    storyParagraph2: "Each room represents a chapter of a forgotten story. Players must explore every corner, decipher emotional puzzles, and face the shadows of memories that preferred to remain buried.",
+    storyParagraph1:
+      "In the depths of a town forgotten by time, stands a mansion whose walls hold echoes of fragmented memories. The House of Memories is not just a place, it's a labyrinth of emotions where past and present intertwine in inexplicable ways.",
+    storyParagraph2:
+      "Each room represents a chapter of a forgotten story. Players must explore every corner, decipher emotional puzzles, and face the shadows of memories that preferred to remain buried.",
     storyQuote: "Memories don't die, they just wait to be found.",
     theMystery: "The Mystery",
-    mysteryDesc: "Discover the secrets hidden behind every closed door and faded photograph.",
+    mysteryDesc:
+      "Discover the secrets hidden behind every closed door and faded photograph.",
     theNostalgia: "Nostalgia",
-    nostalgiaDesc: "Immerse yourself in an atmosphere where every object tells a story of times past.",
+    nostalgiaDesc:
+      "Immerse yourself in an atmosphere where every object tells a story of times past.",
     theDarkness: "The Darkness",
     darknessDesc: "Not all memories are kind. Some prefer to remain in the shadows.",
 
     // Objectives
     objectives: "Player Objectives",
-    objectivesDesc: "Your mission in The House of Memories is to restore the balance between light and shadow.",
+    objectivesDesc:
+      "Your mission in The House of Memories is to restore the balance between light and shadow.",
     objective1Title: "Explore the Mansion",
-    objective1Desc: "Explore every room of The House of Memories. Each chamber holds fragments of forgotten stories that you must discover and connect.",
+    objective1Desc:
+      "Explore every room of The House of Memories. Each chamber holds fragments of forgotten stories that you must discover and connect.",
     objective2Title: "Decipher the Puzzles",
-    objective2Desc: "Solve emotional and mental puzzles that will unlock new areas and reveal secrets hidden in the mansion walls.",
+    objective2Desc:
+      "Solve emotional and mental puzzles that will unlock new areas and reveal secrets hidden in the mansion walls.",
     objective3Title: "Balance Light and Shadow",
-    objective3Desc: "Learn to use Lumen and Vyre's abilities in harmony. Only the balance between both forces will grant you access to the final truth.",
+    objective3Desc:
+      "Learn to use Lumen and Vyre's abilities in harmony. Only the balance between both forces will grant you access to the final truth.",
     objective4Title: "Reveal the Secret",
-    objective4Desc: "Discover what really happened in The House of Memories and decide the fate of the souls that still inhabit its walls.",
+    objective4Desc:
+      "Discover what really happened in The House of Memories and decide the fate of the souls that still inhabit its walls.",
     readyToEnter: "Are you ready to enter the memories?",
     startAdventure: "Start the adventure",
 
     // Bitacora
     devLog: "Development Log",
-    devLogDesc: "Weekly record of progress in the development of The House of Memories.",
+    devLogDesc:
+      "Weekly record of progress in the development of The House of Memories.",
     weekRange: "Week 7 - 16",
     weeksOfDev: "11 weeks of development (includes Holy Week)",
     week: "Week",
@@ -403,6 +437,16 @@ week15Title: "Cambios de diseño",
     developmentContinues: "Development continues as planned. Next update:",
     nextUpdate: "Next update",
     visualDemo: "Visual demo",
+    datePlaceholder: "Date placeholder",
+    progressPlaceholder: "Percentage placeholder",
+    weekProgressLabel: "Progress of the week",
+    weeksLabel: "Weeks",
+    tasksLabel: "Tasks",
+    projectContinues: "Development continues as planned. Next update:",
+    nextUpdateLabel: "Next update",
+    weekImagePlaceholder: "Progress image - Week",
+    finalWeek: "Final",
+    weekSanta: "Santa",
     week7Title: "Project Setup and First Level",
     week7Items: [
       "Project was created, repository was configured, and the menu scene and first level were organized, implementing basic kitchen assets.",
@@ -432,7 +476,7 @@ week15Title: "Cambios de diseño",
       "Developed the first game teaser trailer",
       "Applied a model to The Shadow",
       "Improved previously established stages",
-      "Integrated final models for Lumen and Vyre along with their mechanics"
+      "Integrated final models for Lumen and Vyre along with their mechanics",
     ],
     week12Title: "Scene Development and Mechanics",
     week12Items: [
@@ -446,7 +490,6 @@ week15Title: "Cambios de diseño",
       "Progress was made on the defeat/restart logic.",
       "When the shadow touches one of the players, after 2 seconds a fade out effect is executed and the level automatically restarts.",
     ],
-
     week13Title: "Prologue and Narrative Transitions",
     week13Items: [
       "A prologue scene introducing the beginning of the story and the protagonist's narrative context was implemented.",
@@ -456,7 +499,6 @@ week15Title: "Cambios de diseño",
       "An additional transition between Hallway 1 and the main room was also added.",
       "Several animations and visual adjustments related to the new scenes and environment interactions were finalized.",
     ],
-
     week14Title: "Interactions and Atmosphere",
     week14Items: [
       "New hallway functionalities and environmental interactions were added.",
@@ -465,34 +507,29 @@ week15Title: "Cambios de diseño",
       "Tentacles were also added to the sister's scene, reinforcing the atmosphere and visual tension within the narrative.",
       "Additional atmosphere and visual effect adjustments were made to strengthen narrative immersion and player experience.",
     ],
-week15Title: "Design Changes",
-     week15Items: [
-       "Design changes",
-       "Memory creation with camera filters",
-       "Scene 3 mechanics",
-       "Epilogue creation",
-       "Final scene mechanics (sister's room)",
-       "Final battle",
-       "Main menu improvement",
-       "Credits scene at game completion",
-     ],
-    datePlaceholder: "Date placeholder",
-    progressPlaceholder: "Percentage placeholder",
-    weekProgressLabel: "Progress of the week",
-    weeksLabel: "Weeks",
-    tasksLabel: "Tasks",
-    projectContinues: "Development continues as planned. Next update:",
-    nextUpdateLabel: "Next update",
-    weekImagePlaceholder: "Progress image - Week",
-    finalWeek: "Final",
-    weekSanta: "Santa",
-    characterOfLight: "Character of light",
-    characterOfShadow: "Character of shadow",
-    illustrationOf: "Illustration of",
+    week15Title: "Design Changes",
+    week15Items: [
+      "Design changes",
+      "Memory creation with camera filters",
+      "Scene 3 mechanics",
+      "Epilogue creation",
+      "Final scene mechanics (sister's room)",
+      "Final battle",
+      "Main menu improvement",
+      "Credits scene at game completion",
+    ],
+    week16Title: "Final Testing and Documentation",
+    week16Items: [
+      "Exhaustive gameplay testing and bug detection",
+      "Final optimization of load times and performance",
+      "Creation of user manual and technical documentation",
+      "Preparation of promotional materials and screenshots",
+    ],
 
     // Team
     ourTeam: "Our Team",
-    teamDesc: "The creators behind 'The House of Memories', a team passionate about telling interactive stories.",
+    teamDesc:
+      "The creators behind 'The House of Memories', a team passionate about telling interactive stories.",
     developer: "Developer",
     designer: "Designer",
     marianaDesc: "Specialized in character design and interactive storytelling.",
